@@ -13,7 +13,7 @@ while True:
                 print(err)
                 continue
             count += 1
-            total +=  number
+            total += number
     except EOFError:
         break
 

@@ -25,11 +25,12 @@ def get_forenames_and_surnames():
 
 forenames, surnames = get_forenames_and_surnames()
 with open("test-names2.txt", "w", encoding="utf8") as file:
-    limit = 100
+    limit = 100          #this is for the limit of random.sample()
     years = list(range(1970, 2013)) * 3
     for year, forename, surname in zip(
             random.sample(years, limit),
             random.sample(forenames, limit),
-            random.sample(surnames, limit)):
+            random.sample(surnames, limit)):# zip together total 100 elements
         name = "{0} {1}".format(forename, surname)
         file.write("{0:.<25}.{1}\n".format(name, year))
+        			#filled with period left aligned minimum 25 characters long

@@ -1,0 +1,6 @@
+import os
+
+for dirPath, dirNames, fileName in os.walk('~/Programming/'):
+    print(dirPath)
+    for f in fileNames:
+        print(os.path.join(dirPath,f))

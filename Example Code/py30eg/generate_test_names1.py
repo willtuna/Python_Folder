@@ -16,8 +16,8 @@ def get_forenames_and_surnames():
     forenames = []
     surnames = []
     for names, filename in ((forenames, "data/forenames.txt"),
-                            (surnames, "data/surnames.txt")):
-        with open(filename, encoding="utf8") as file:
+                            (surnames, "data/surnames.txt")):# first put first tuple to (names, filename)
+        with open(filename, encoding="utf8") as file: # this with open() as just used substituding the try exceipt method
             for name in file:
                 names.append(name.rstrip())
     return forenames, surnames
